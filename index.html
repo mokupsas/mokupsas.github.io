@@ -1,2 +1,71 @@
-Hellow world
-<a href="https://grameris.lt/">A</a>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>Web programuotojas - mokupsas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .message {
+            display: inline-block;
+            margin-bottom: 6px;
+            background-color: #e5e7eb;
+            padding: 10px 20px;
+            border-radius: 27px;
+            margin-left: -305px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main" class="h-screen overflow-hidden">
+        <img src="public/img/mokupsas.png" class="mt-10 mx-auto w-16 rounded-full"/>
+
+        <div class="mx-auto mt-10 flex flex-col w-[450px] overflow-hidden">
+
+            <div class="flex">
+                <div class="message">
+                    <span class="text-gray-900 text-2xl">Labas! 🖐</span>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="message">
+                    <span class="text-gray-900 text-2xl">Aš esu mokupsas</span>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="message">
+                    <span class="text-gray-900 text-2xl">Web programuotojas 💻</span>
+                </div>
+            </div>
+
+            <!--
+            <div class="flex">
+                <div class="inline-block ml-auto mb-2 bg-blue-500 px-5 py-4 rounded-full">
+                    <span class="text-gray-100 text-2xl">As esu</span>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </div>
+
+    <script src="public/js/anime.min.js"></script>
+    <script>
+        let messages = document.querySelectorAll('.message');
+
+        anime({
+            targets: messages,
+            translateX: 320,
+            duration: 3000,
+            delay: function(el, i, l) {
+                return i * 1500;
+            },
+            endDelay: function(el, i, l) {
+                return (l - i) * 1500;
+            }
+        });
+    </script>
+</body>
+</html> 
