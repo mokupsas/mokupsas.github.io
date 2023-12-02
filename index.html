@@ -25,6 +25,7 @@
 </head>
 <body>
 
+    <!--
     <div id="main" class="h-screen overflow-hidden">
         <img src="public/img/mokupsas.png" class="mt-10 mx-auto w-16 rounded-full"/>
 
@@ -48,20 +49,50 @@
                 </div>
             </div>
 
-            <!--
             <div class="flex">
-                <div class="inline-block ml-auto mb-2 bg-blue-500 px-5 py-4 rounded-full">
-                    <span class="text-gray-100 text-2xl">As esu</span>
+                <div class="message">
+                    <div>
+                        <div class="text-gray-900 text-2xl">
+                            <p>👇 Navigacija 👇</p>
+                            <br>
+                            <p onclick="goToId('page')" class="text-blue-700 cursor-pointer">Portfolio</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            -->
 
+        </div>
+    </div>
+    -->
+
+    <div id="page" class="min-h-screen">
+        <div class="w-[40rem] mx-auto bg-gray-100">
+            <div class="flex">
+                <div class="w-full">
+                    <h4 class="text-xl">Featured Project</h4>
+                    <p>Spotify Profile</p>
+                    <p>A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.</p>
+                    <div>
+                        <span>React</span>
+                        <span>Aba</span>
+                    </div>
+                </div>
+                <div>
+                    <img class="h-96 w-64 rounded object-cover" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/9d0171173626261.649343847a396.jpg">
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="public/js/anime.min.js"></script>
     <script>
         let messages = document.querySelectorAll('.message');
+
+        function goToId(id) {
+            el = document.getElementById('portfolio')
+            el.style.display = "block"; 
+            el.scrollIntoView({block: 'start', behavior: 'smooth'});
+        }
 
         anime({
             targets: messages,
